@@ -4,17 +4,15 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /*
- * Just a class to help keep the code clean
- * Both variables are public, static, and final
- * 		So they canNOT be changed during run-time, and
- * 		You can access them with SoundList.sounds[index] and SoundList.length
- * Put all sound file names into the String array with the file extension in the name
+ * Manages the file names/paths in audioList.txt and loads them into an array
+ * No set methods in order to make sure the list doesn't change while the program is running
  */
 public class SoundList
 {
-	private static ArrayList<String> sounds;
+	private static ArrayList<String> sounds = null;
 	private static int length;
 	
+	// Load all the file names/paths from audioList.txt into an ArrayList
 	public static void createList()
 	{
 		try {
@@ -28,8 +26,14 @@ public class SoundList
 	}
 	
 	public static String getSoundPath(int idx) {
-		return sounds.get(idx); }
+		if(sounds == null) { // avoid null pointer exception
+			createList(); }
+		return sounds.get(idx);
+	}
 	
 	public static int getLength() {
-		return length; }
+		if(sounds == null) { // avoid null pointer exception
+			createList(); }
+		return length;
+	}
 }

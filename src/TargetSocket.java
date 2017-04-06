@@ -45,7 +45,6 @@ public class TargetSocket
 			dOut = new DataOutputStream(socket.getOutputStream()); // initialize output stream
 			dOut.writeUTF("Connection established"); // tell the controller it is connected
 			dOut.flush(); // send the message
-			SoundList.createList(); // read the file of audio file names before any commands can be sent
 			commandLoop(); // enter the main loop
 			socket.close(); // close the Socket
 			radar.close(); // close the ServerSocket
