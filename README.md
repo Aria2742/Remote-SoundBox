@@ -24,14 +24,14 @@ This program requires the [JLayer library](http://www.javazoom.net/javalayer/jav
 
 ## Command List
 ### -1
-Returns the list of all audio files and the number command to play each file
+Returns the list of all audio files and the number command to play each file</br>
 Example output: "0:boop.mp3"
 ### 0, 1, 2, 3, ...
-Plays the audio file (use -1 to see what numbers play what audio)
+Plays the audio file (use -1 to see what numbers play what audio)</br>
 Returns either "command successful" or an error message depending on whether or not the command works
 ### -2
-close both connections
+close both connections</br>
 need to implement: close controller connection but leave remote connection open
 ### -3, -4, -5, -6, ...
-close both connections
+close both connections</br>
 need to implement: close both connections (a bit cleaner controller-side hopefully)
