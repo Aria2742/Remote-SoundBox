@@ -14,6 +14,7 @@ This program requires the [JLayer library](http://www.javazoom.net/javalayer/jav
   * If the audio files are NOT in the same directory as remote.jar, the full file path must be used
 4. Place remote.jar, audioList.txt, and all audio files on the computer to wish to remotely play sound from
   * All audio files must have the same file path if the path is specified
+  * AudioList.txt MUST be in the same directory as remote.jar
 5. Run remote.jar
   * You should see a pop-up window saying that the program is executing. You can close that window
 6. Get the IP address of the computer runnning remote.jar
@@ -30,8 +31,7 @@ Example output: "0:boop.mp3"
 Plays the audio file (use -1 to see what numbers play what audio)</br>
 Returns either "command successful" or an error message depending on whether or not the command works
 ### -2
-close both connections</br>
-need to implement: close controller connection but leave remote connection open
+Close the controller's connection, but keeps the remote open to reconnect
 ### -3, -4, -5, -6, ...
-close both connections</br>
-need to implement: close both connections (a bit cleaner controller-side hopefully)
+Close both the controller's connection and the remote's connection</br>
+Note: to reconnect to the remote after this, you MUST restart the remote.jar
