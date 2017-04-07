@@ -36,6 +36,7 @@ public class TargetSocket
 
 	public void run()
 	{
+		AudioManager.setSocket(this); // pass this to the AudioManager so it can pass back errors
 		try {
 			radar = new ServerSocket(portNum); // create a ServerSocket at portNum
 			//System.out.println("Waiting for connection");
