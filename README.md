@@ -1,5 +1,5 @@
 # Remote-SoundBox
-Use this program to remotely play sounds on another device. Originally written to prank a friend, but it might have other uses.
+Use this program to remotely play sounds on another device. Originally written to prank a friend (he did find it quite entertaining once he figured it out and I explained it), but it might have other uses.
 
 ## NOTE
 This program requires the [JLayer library](http://www.javazoom.net/javalayer/javalayer.html) to play audio since it supports mp3 files. If you want to edit the code yourself and recompile, you will need the library for it to work. You do not need it if you are only using the compiled code. I used version 1.0.1 for this project.
